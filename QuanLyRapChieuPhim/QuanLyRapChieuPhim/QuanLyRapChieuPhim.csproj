@@ -191,5 +191,8 @@
   <ItemGroup>
     <None Include="Resources\note_f2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh-nen-3d-dep-cho-dien-thoai-13.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
