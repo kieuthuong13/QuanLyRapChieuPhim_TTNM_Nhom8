@@ -215,6 +215,8 @@
   <ItemGroup>
     <None Include="Resources\rateok_48_hot.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="CSDL\script.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

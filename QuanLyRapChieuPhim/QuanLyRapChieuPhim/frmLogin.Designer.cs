@@ -86,6 +86,7 @@
             this.textBoxUser.Name = "textBoxUser";
             this.textBoxUser.Size = new System.Drawing.Size(210, 20);
             this.textBoxUser.TabIndex = 10;
+            this.textBoxUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxUser_KeyDown);
             // 
             // btnLogin
             // 
@@ -110,6 +111,7 @@
             this.textBoxPass.PasswordChar = '•';
             this.textBoxPass.Size = new System.Drawing.Size(210, 20);
             this.textBoxPass.TabIndex = 11;
+            this.textBoxPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxPass_KeyDown);
             // 
             // pictureBox1
             // 
