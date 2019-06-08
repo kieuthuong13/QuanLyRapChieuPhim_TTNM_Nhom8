@@ -169,29 +169,23 @@ namespace QuanLyRapChieuPhim
         {
             try
             {
-                PHIM_struct p = new PHIM_struct();
+                PHIM p = new PHIM();
                 p.MaPhim = int.Parse(txtMaPhim.Text);
                 p.TenPhim = txtTen.Text;
                 p.DaoDien = txtDaoDien.Text;
                 p.DaoDien = txtDaoDien.Text;
                 p.DienVien = txtDienVien.Text;
-                p.TenLoai = txtTheLoai.Text;
-
+                p.MaLoai = int.Parse(txtTheLoai.Text);
                 p.QuocGia = cbxQuocGia.Text;
                 p.ThoiLuong = int.Parse(txtThoiLuong.Text);
                 p.Poster = txtPos.Text;
                 p.Trailer = txtTrailer.Text;
                 p.NoiDung = rtbNoiDung.Text;
 
-                //thêm hoặc update bản ghi của nhân viên
+                db.PHIMs.AddOrUpdate(p);
 
-                db.PHIMs.AddOrUpdate();
-                //db.Database.ExecuteSqlCommand("SET IDENTITY_INSERT [dbo].[NHANVIEN] OFF");
-                //lưu thay đổi
                 db.SaveChanges();
-                MessageBox.Show("Thêm dữ liệu nhân viên thành công!");
-
-                //btnLamMoi_Click(sender, e);
+                MessageBox.Show("Thêm dữ liệu thành công!");
             }
             catch (Exception)
             {

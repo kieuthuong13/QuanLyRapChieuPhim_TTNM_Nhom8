@@ -34,10 +34,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.rtbNoiDung = new System.Windows.Forms.RichTextBox();
             this.cbxQuocGia = new System.Windows.Forms.ComboBox();
-            this.picTheLoai = new System.Windows.Forms.PictureBox();
-            this.picDienVien = new System.Windows.Forms.PictureBox();
-            this.picDaoDien = new System.Windows.Forms.PictureBox();
-            this.picTen = new System.Windows.Forms.PictureBox();
             this.picMaPhim = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtTrailer = new System.Windows.Forms.TextBox();
@@ -73,10 +69,6 @@
             this.dtpNamSX = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picTheLoai)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDienVien)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDaoDien)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picTen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaPhim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhim)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -126,10 +118,6 @@
             this.groupBox3.Controls.Add(this.dtpNamSX);
             this.groupBox3.Controls.Add(this.rtbNoiDung);
             this.groupBox3.Controls.Add(this.cbxQuocGia);
-            this.groupBox3.Controls.Add(this.picTheLoai);
-            this.groupBox3.Controls.Add(this.picDienVien);
-            this.groupBox3.Controls.Add(this.picDaoDien);
-            this.groupBox3.Controls.Add(this.picTen);
             this.groupBox3.Controls.Add(this.picMaPhim);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.txtTrailer);
@@ -174,38 +162,6 @@
             this.cbxQuocGia.Name = "cbxQuocGia";
             this.cbxQuocGia.Size = new System.Drawing.Size(185, 27);
             this.cbxQuocGia.TabIndex = 190;
-            // 
-            // picTheLoai
-            // 
-            this.picTheLoai.Location = new System.Drawing.Point(318, 155);
-            this.picTheLoai.Name = "picTheLoai";
-            this.picTheLoai.Size = new System.Drawing.Size(19, 23);
-            this.picTheLoai.TabIndex = 188;
-            this.picTheLoai.TabStop = false;
-            // 
-            // picDienVien
-            // 
-            this.picDienVien.Location = new System.Drawing.Point(318, 123);
-            this.picDienVien.Name = "picDienVien";
-            this.picDienVien.Size = new System.Drawing.Size(19, 23);
-            this.picDienVien.TabIndex = 187;
-            this.picDienVien.TabStop = false;
-            // 
-            // picDaoDien
-            // 
-            this.picDaoDien.Location = new System.Drawing.Point(319, 91);
-            this.picDaoDien.Name = "picDaoDien";
-            this.picDaoDien.Size = new System.Drawing.Size(19, 23);
-            this.picDaoDien.TabIndex = 186;
-            this.picDaoDien.TabStop = false;
-            // 
-            // picTen
-            // 
-            this.picTen.Location = new System.Drawing.Point(318, 58);
-            this.picTen.Name = "picTen";
-            this.picTen.Size = new System.Drawing.Size(19, 23);
-            this.picTen.TabIndex = 185;
-            this.picTen.TabStop = false;
             // 
             // picMaPhim
             // 
@@ -597,10 +553,6 @@
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picTheLoai)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDienVien)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDaoDien)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picTen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaPhim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhim)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -644,13 +596,9 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btnThongKe;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.PictureBox picDaoDien;
-        private System.Windows.Forms.PictureBox picTen;
         private System.Windows.Forms.PictureBox picMaPhim;
         private System.Windows.Forms.ComboBox cbxQuocGia;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.PictureBox picTheLoai;
-        private System.Windows.Forms.PictureBox picDienVien;
         private System.Windows.Forms.RichTextBox rtbNoiDung;
         private System.Windows.Forms.DateTimePicker dtpNamSX;
     }

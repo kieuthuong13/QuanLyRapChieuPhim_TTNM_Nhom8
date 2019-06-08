@@ -37,7 +37,6 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -63,15 +62,16 @@
             this.txtMaPhong = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.picMaPhong = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.picMaPhong = new System.Windows.Forms.PictureBox();
+            this.rtbGhiChu = new System.Windows.Forms.RichTextBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhim)).BeginInit();
             this.groupBox3.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMaPhong)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnThem
@@ -205,13 +205,6 @@
             this.btnLamMoi.Text = "Nhập nội dung";
             this.btnLamMoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLamMoi.UseVisualStyleBackColor = false;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(438, 120);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(185, 26);
-            this.textBox8.TabIndex = 15;
             // 
             // label9
             // 
@@ -403,6 +396,7 @@
             this.txtMaPhong.Name = "txtMaPhong";
             this.txtMaPhong.Size = new System.Drawing.Size(185, 26);
             this.txtMaPhong.TabIndex = 1;
+            this.txtMaPhong.TextChanged += new System.EventHandler(this.txtMaPhong_TextChanged);
             // 
             // label2
             // 
@@ -417,8 +411,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.rtbGhiChu);
             this.groupBox3.Controls.Add(this.picMaPhong);
-            this.groupBox3.Controls.Add(this.textBox8);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.textBox7);
             this.groupBox3.Controls.Add(this.label8);
@@ -442,6 +436,15 @@
             this.groupBox3.TabIndex = 184;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Nhập đầy đủ thông tin phòng chiếu";
+            // 
+            // picMaPhong
+            // 
+            this.picMaPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picMaPhong.Location = new System.Drawing.Point(309, 25);
+            this.picMaPhong.Name = "picMaPhong";
+            this.picMaPhong.Size = new System.Drawing.Size(19, 23);
+            this.picMaPhong.TabIndex = 185;
+            this.picMaPhong.TabStop = false;
             // 
             // label1
             // 
@@ -482,14 +485,13 @@
             this.groupBox1.TabIndex = 183;
             this.groupBox1.TabStop = false;
             // 
-            // picMaPhong
+            // rtbGhiChu
             // 
-            this.picMaPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.picMaPhong.Location = new System.Drawing.Point(309, 25);
-            this.picMaPhong.Name = "picMaPhong";
-            this.picMaPhong.Size = new System.Drawing.Size(19, 23);
-            this.picMaPhong.TabIndex = 185;
-            this.picMaPhong.TabStop = false;
+            this.rtbGhiChu.Location = new System.Drawing.Point(438, 120);
+            this.rtbGhiChu.Name = "rtbGhiChu";
+            this.rtbGhiChu.Size = new System.Drawing.Size(185, 77);
+            this.rtbGhiChu.TabIndex = 193;
+            this.rtbGhiChu.Text = "";
             // 
             // frmQuanLyPhongChieu
             // 
@@ -509,9 +511,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhim)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMaPhong)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picMaPhong)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -526,7 +528,6 @@
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnTimKiem;
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label8;
@@ -557,5 +558,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DienTich;
         private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
         private System.Windows.Forms.PictureBox picMaPhong;
+        private System.Windows.Forms.RichTextBox rtbGhiChu;
     }
 }

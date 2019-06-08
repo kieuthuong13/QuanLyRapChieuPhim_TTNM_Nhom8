@@ -24,5 +24,15 @@ namespace QuanLyRapChieuPhim
             this.Owner.Show();
             this.Dispose();
         }
+
+        private void txtMaChieu_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void jcf(object sender, EventArgs e)
+        {
+
+        }
     }
 }

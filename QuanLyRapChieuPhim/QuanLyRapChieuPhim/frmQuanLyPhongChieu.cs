@@ -27,14 +27,17 @@ namespace QuanLyRapChieuPhim
 
         private void txtMaPhong_TextChanged(object sender, EventArgs e)
         {
-            if (txtMaPhong.Text.Length >= 8)
+            if (txtMaPhong.Text.Length >= 8 | string.IsNullOrWhiteSpace(txtMaPhong.Text))
             {
-                picMaPhong.BackgroundImage = Properties.Resources.close_hi;
+                // Properties.Resources.del_48_hot; cái này là địa chỉ hình ảnh mà mình đã thêm nó vào trong resource
+                // e biết kiểm tra ảnh trong Properties.Resource chưa?
+                picMaPhong.BackgroundImage = Properties.Resources.del_48_hot;
             }
             else
             {
                 picMaPhong.BackgroundImage = null;
             }
         }
+        
     }
 }
