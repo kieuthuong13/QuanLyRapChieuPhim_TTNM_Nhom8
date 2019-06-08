@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLyRapChieuPhim.Models;
 
 namespace QuanLyRapChieuPhim
 {
@@ -16,6 +17,13 @@ namespace QuanLyRapChieuPhim
         {
             InitializeComponent();
             this.MinimumSize = new Size(1150, 700);
+        }
+
+        public void ClearInput()
+        {
+            textBoxPass.Text = "";
+            textBoxUser.Focus();
+            textBoxUser.SelectAll();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

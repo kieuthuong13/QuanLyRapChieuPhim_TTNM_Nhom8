@@ -17,5 +17,24 @@ namespace QuanLyRapChieuPhim
             InitializeComponent();
             this.MinimumSize = new Size(1080, 710);
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Owner.Enabled = true;
+            this.Owner.Show();
+            this.Dispose();
+        }
+
+        private void txtMaPhong_TextChanged(object sender, EventArgs e)
+        {
+            if (txtMaPhong.Text.Length >= 8)
+            {
+                picMaPhong.BackgroundImage = Properties.Resources.close_hi;
+            }
+            else
+            {
+                picMaPhong.BackgroundImage = null;
+            }
+        }
     }
 }

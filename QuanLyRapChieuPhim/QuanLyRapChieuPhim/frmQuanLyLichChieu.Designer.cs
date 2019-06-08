@@ -45,12 +45,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvPhim = new System.Windows.Forms.DataGridView();
-            this.MaChieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenPhim = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PhongChieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CaChieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayBD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayKT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -63,6 +57,12 @@
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
+            this.MaChieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenPhim = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PhongChieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CaChieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayBD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayKT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhim)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -193,9 +193,9 @@
             this.label6.ForeColor = System.Drawing.Color.MediumBlue;
             this.label6.Location = new System.Drawing.Point(28, 155);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(110, 19);
+            this.label6.Size = new System.Drawing.Size(59, 19);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Ngày công chiếu";
+            this.label6.Text = "Từ ngày";
             // 
             // textBox4
             // 
@@ -268,36 +268,6 @@
             this.dgvPhim.Name = "dgvPhim";
             this.dgvPhim.Size = new System.Drawing.Size(644, 310);
             this.dgvPhim.TabIndex = 185;
-            // 
-            // MaChieu
-            // 
-            this.MaChieu.HeaderText = "Mã chiếu";
-            this.MaChieu.Name = "MaChieu";
-            // 
-            // TenPhim
-            // 
-            this.TenPhim.HeaderText = "Tên phim";
-            this.TenPhim.Name = "TenPhim";
-            // 
-            // PhongChieu
-            // 
-            this.PhongChieu.HeaderText = "Phòng chiếu";
-            this.PhongChieu.Name = "PhongChieu";
-            // 
-            // CaChieu
-            // 
-            this.CaChieu.HeaderText = "Ca chiếu";
-            this.CaChieu.Name = "CaChieu";
-            // 
-            // NgayBD
-            // 
-            this.NgayBD.HeaderText = "Ngày công chiếu";
-            this.NgayBD.Name = "NgayBD";
-            // 
-            // NgayKT
-            // 
-            this.NgayKT.HeaderText = "Ngày kết thúc";
-            this.NgayKT.Name = "NgayKT";
             // 
             // textBox1
             // 
@@ -454,6 +424,36 @@
             this.textBox8.Size = new System.Drawing.Size(382, 26);
             this.textBox8.TabIndex = 177;
             // 
+            // MaChieu
+            // 
+            this.MaChieu.HeaderText = "Mã chiếu";
+            this.MaChieu.Name = "MaChieu";
+            // 
+            // TenPhim
+            // 
+            this.TenPhim.HeaderText = "Tên phim";
+            this.TenPhim.Name = "TenPhim";
+            // 
+            // PhongChieu
+            // 
+            this.PhongChieu.HeaderText = "Phòng chiếu";
+            this.PhongChieu.Name = "PhongChieu";
+            // 
+            // CaChieu
+            // 
+            this.CaChieu.HeaderText = "Ca chiếu";
+            this.CaChieu.Name = "CaChieu";
+            // 
+            // NgayBD
+            // 
+            this.NgayBD.HeaderText = "Từ ngày";
+            this.NgayBD.Name = "NgayBD";
+            // 
+            // NgayKT
+            // 
+            this.NgayKT.HeaderText = "Ngày kết thúc";
+            this.NgayKT.Name = "NgayKT";
+            // 
             // frmQuanLyLichChieu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -508,15 +508,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaChieu;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenPhim;
         private System.Windows.Forms.DataGridViewTextBoxColumn PhongChieu;
         private System.Windows.Forms.DataGridViewTextBoxColumn CaChieu;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayBD;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayKT;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox textBox8;
     }
 }

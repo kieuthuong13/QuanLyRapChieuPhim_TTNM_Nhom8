@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace QuanLyRapChieuPhim
 {
     public partial class frmQuanLyPhim : Form
@@ -28,6 +29,21 @@ namespace QuanLyRapChieuPhim
         private void frmQuanLyPhim_Load(object sender, EventArgs e)
         {
 
+            this.Owner.Hide();
+        }
+
+        private void txtMaPhim_TextChanged(object sender, EventArgs e)
+        {
+            if(txtMaPhim.Text.Length >=8 | string.IsNullOrWhiteSpace(txtMaPhim.Text))
+            {
+                // Properties.Resources.del_48_hot; cái này là địa chỉ hình ảnh mà mình đã thêm nó vào trong resource
+                // e biết kiểm tra ảnh trong Properties.Resource chưa?
+                picMaPhim.BackgroundImage = Properties.Resources.del_48_hot;
+            }
+            else
+            {
+                picMaPhim.BackgroundImage = null;
+            }
         }
     }
 }
