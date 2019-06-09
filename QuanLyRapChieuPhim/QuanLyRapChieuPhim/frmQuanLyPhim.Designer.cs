@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dtpNanSX = new System.Windows.Forms.DateTimePicker();
             this.rtbNoiDung = new System.Windows.Forms.RichTextBox();
             this.cbxQuocGia = new System.Windows.Forms.ComboBox();
             this.picMaPhim = new System.Windows.Forms.PictureBox();
@@ -56,17 +57,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dgvPhim = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.btnThongKe = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtNoiDung = new System.Windows.Forms.TextBox();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnNoiDungTim = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
-            this.dtpNamSX = new System.Windows.Forms.DateTimePicker();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMaPhim)).BeginInit();
@@ -79,6 +77,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.BackColor = System.Drawing.Color.MediumAquamarine;
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnThoat);
             this.groupBox1.Location = new System.Drawing.Point(3, 1);
@@ -115,7 +114,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.dtpNamSX);
+            this.groupBox3.Controls.Add(this.dtpNanSX);
             this.groupBox3.Controls.Add(this.rtbNoiDung);
             this.groupBox3.Controls.Add(this.cbxQuocGia);
             this.groupBox3.Controls.Add(this.picMaPhim);
@@ -146,6 +145,16 @@
             this.groupBox3.TabIndex = 180;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Nhập đầy đủ thông tin Phim";
+            // 
+            // dtpNanSX
+            // 
+            this.dtpNanSX.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpNanSX.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.dtpNanSX.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNanSX.Location = new System.Drawing.Point(126, 184);
+            this.dtpNanSX.Name = "dtpNanSX";
+            this.dtpNanSX.Size = new System.Drawing.Size(185, 22);
+            this.dtpNanSX.TabIndex = 196;
             // 
             // rtbNoiDung
             // 
@@ -355,7 +364,7 @@
             this.dgvPhim.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvPhim.BackgroundColor = System.Drawing.Color.Thistle;
+            this.dgvPhim.BackgroundColor = System.Drawing.Color.Aquamarine;
             this.dgvPhim.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPhim.Location = new System.Drawing.Point(3, 309);
             this.dgvPhim.Name = "dgvPhim";
@@ -365,10 +374,9 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.comboBox2);
-            this.groupBox2.Controls.Add(this.btnThongKe);
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.groupBox2.Controls.Add(this.txtTimKiem);
+            this.groupBox2.Controls.Add(this.txtNoiDung);
             this.groupBox2.Controls.Add(this.btnThem);
             this.groupBox2.Controls.Add(this.btnNoiDungTim);
             this.groupBox2.Controls.Add(this.btnSua);
@@ -384,49 +392,17 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
             // 
-            // textBox1
+            // txtNoiDung
             // 
-            this.textBox1.Location = new System.Drawing.Point(254, 81);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(181, 26);
-            this.textBox1.TabIndex = 180;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(254, 131);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(181, 27);
-            this.comboBox2.TabIndex = 179;
-            // 
-            // btnThongKe
-            // 
-            this.btnThongKe.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnThongKe.BackColor = System.Drawing.Color.Plum;
-            this.btnThongKe.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKe.ForeColor = System.Drawing.Color.Black;
-            this.btnThongKe.Image = global::QuanLyRapChieuPhim.Properties.Resources.rateok_48_hot;
-            this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKe.Location = new System.Drawing.Point(108, 123);
-            this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Size = new System.Drawing.Size(140, 41);
-            this.btnThongKe.TabIndex = 178;
-            this.btnThongKe.Text = "Thống kê";
-            this.btnThongKe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnThongKe.UseVisualStyleBackColor = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(254, 33);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(181, 27);
-            this.comboBox1.TabIndex = 176;
+            this.txtNoiDung.Location = new System.Drawing.Point(180, 152);
+            this.txtNoiDung.Name = "txtNoiDung";
+            this.txtNoiDung.Size = new System.Drawing.Size(181, 26);
+            this.txtNoiDung.TabIndex = 180;
             // 
             // btnThem
             // 
             this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnThem.BackColor = System.Drawing.Color.Plum;
+            this.btnThem.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnThem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.Black;
@@ -434,7 +410,7 @@
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThem.Location = new System.Drawing.Point(8, 23);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(94, 44);
+            this.btnThem.Size = new System.Drawing.Size(94, 54);
             this.btnThem.TabIndex = 172;
             this.btnThem.Text = "Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -444,30 +420,30 @@
             // btnNoiDungTim
             // 
             this.btnNoiDungTim.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnNoiDungTim.BackColor = System.Drawing.Color.Plum;
+            this.btnNoiDungTim.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnNoiDungTim.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNoiDungTim.ForeColor = System.Drawing.Color.Black;
             this.btnNoiDungTim.Image = global::QuanLyRapChieuPhim.Properties.Resources.note_f2;
             this.btnNoiDungTim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNoiDungTim.Location = new System.Drawing.Point(108, 73);
+            this.btnNoiDungTim.Location = new System.Drawing.Point(47, 144);
             this.btnNoiDungTim.Name = "btnNoiDungTim";
-            this.btnNoiDungTim.Size = new System.Drawing.Size(140, 41);
+            this.btnNoiDungTim.Size = new System.Drawing.Size(111, 41);
             this.btnNoiDungTim.TabIndex = 175;
-            this.btnNoiDungTim.Text = "Nhập nội dung";
+            this.btnNoiDungTim.Text = "Nội dung";
             this.btnNoiDungTim.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNoiDungTim.UseVisualStyleBackColor = false;
             // 
             // btnSua
             // 
             this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSua.BackColor = System.Drawing.Color.Plum;
+            this.btnSua.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnSua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.Black;
             this.btnSua.Image = global::QuanLyRapChieuPhim.Properties.Resources.editadd_48_hot;
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(8, 73);
+            this.btnSua.Location = new System.Drawing.Point(119, 23);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(94, 41);
+            this.btnSua.Size = new System.Drawing.Size(94, 54);
             this.btnSua.TabIndex = 168;
             this.btnSua.Text = "Sửa";
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -476,15 +452,15 @@
             // btnLuu
             // 
             this.btnLuu.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnLuu.BackColor = System.Drawing.Color.Plum;
+            this.btnLuu.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnLuu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ForeColor = System.Drawing.Color.Black;
             this.btnLuu.Image = global::QuanLyRapChieuPhim.Properties.Resources.save_48_hot;
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuu.Location = new System.Drawing.Point(8, 166);
+            this.btnLuu.Location = new System.Drawing.Point(350, 23);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(94, 44);
+            this.btnLuu.Size = new System.Drawing.Size(94, 52);
             this.btnLuu.TabIndex = 170;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -494,14 +470,14 @@
             // btnXoa
             // 
             this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnXoa.BackColor = System.Drawing.Color.Plum;
+            this.btnXoa.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.Black;
             this.btnXoa.Image = global::QuanLyRapChieuPhim.Properties.Resources.delete;
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(8, 119);
+            this.btnXoa.Location = new System.Drawing.Point(231, 24);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(94, 44);
+            this.btnXoa.Size = new System.Drawing.Size(94, 52);
             this.btnXoa.TabIndex = 169;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -510,34 +486,31 @@
             // btnTimKiem
             // 
             this.btnTimKiem.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnTimKiem.BackColor = System.Drawing.Color.Plum;
+            this.btnTimKiem.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnTimKiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiem.ForeColor = System.Drawing.Color.Black;
             this.btnTimKiem.Image = global::QuanLyRapChieuPhim.Properties.Resources.xem;
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiem.Location = new System.Drawing.Point(108, 23);
+            this.btnTimKiem.Location = new System.Drawing.Point(47, 94);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(140, 44);
+            this.btnTimKiem.Size = new System.Drawing.Size(111, 44);
             this.btnTimKiem.TabIndex = 174;
-            this.btnTimKiem.Text = "Tìm kiếm theo";
+            this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimKiem.UseVisualStyleBackColor = false;
             // 
-            // dtpNamSX
+            // txtTimKiem
             // 
-            this.dtpNamSX.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtpNamSX.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.dtpNamSX.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNamSX.Location = new System.Drawing.Point(126, 184);
-            this.dtpNamSX.Name = "dtpNamSX";
-            this.dtpNamSX.Size = new System.Drawing.Size(185, 22);
-            this.dtpNamSX.TabIndex = 193;
+            this.txtTimKiem.Location = new System.Drawing.Point(180, 104);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(181, 26);
+            this.txtTimKiem.TabIndex = 181;
             // 
             // frmQuanLyPhim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Thistle;
+            this.BackColor = System.Drawing.Color.MediumAquamarine;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1116, 607);
             this.Controls.Add(this.groupBox2);
@@ -593,13 +566,11 @@
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button btnThongKe;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.PictureBox picMaPhim;
         private System.Windows.Forms.ComboBox cbxQuocGia;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNoiDung;
         private System.Windows.Forms.RichTextBox rtbNoiDung;
-        private System.Windows.Forms.DateTimePicker dtpNamSX;
+        private System.Windows.Forms.DateTimePicker dtpNanSX;
+        private System.Windows.Forms.TextBox txtTimKiem;
     }
 }

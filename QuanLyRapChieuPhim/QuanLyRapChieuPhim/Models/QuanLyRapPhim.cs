@@ -19,6 +19,7 @@ namespace QuanLyRapChieuPhim.Models
         public virtual DbSet<PHONGCHIEU> PHONGCHIEUx { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TAIKHOAN> TAIKHOANs { get; set; }
+        public virtual DbSet<THANHVIEN> THANHVIENs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -27,6 +28,14 @@ namespace QuanLyRapChieuPhim.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<TAIKHOAN>()
+                .Property(e => e.MatKhau)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<THANHVIEN>()
+                .Property(e => e.TenDangNhap)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<THANHVIEN>()
                 .Property(e => e.MatKhau)
                 .IsUnicode(false);
         }

@@ -32,8 +32,7 @@ namespace QuanLyRapChieuPhim.Models
         [StringLength(100)]
         public string NoiDung { get; set; }
 
-        [StringLength(100)]
-        public string NamSX { get; set; }
+        public DateTime? NamSX { get; set; }
 
         [StringLength(100)]
         public string QuocGia { get; set; }

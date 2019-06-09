@@ -48,7 +48,7 @@ namespace QuanLyRapChieuPhim
 
         #region MY STRUCT - CLASS
         [Table("PHIM")]
-        public  class PHIM_struct
+        public  class PHIM_STRUCT
         {
             [Key]
             public int MaPhim { get; set; }
@@ -61,6 +61,8 @@ namespace QuanLyRapChieuPhim
 
             [StringLength(100)]
             public string DienVien { get; set; }
+
+            public int? MaLoai { get; set; }
 
             [StringLength(100)]
             public string TenLoai { get; set; }
@@ -86,7 +88,7 @@ namespace QuanLyRapChieuPhim
 
         private void frmQuanLyPhim_Load(object sender, EventArgs e)
         {
-            dgvPhim.DataSource = db.Database.SqlQuery<PHIM_struct>("Select * from PHIM").ToList();
+            dgvPhim.DataSource = db.Database.SqlQuery<PHIM_STRUCT>("Select * from PHIM").ToList();
             this.Owner.Hide();
         }
 
@@ -129,13 +131,13 @@ namespace QuanLyRapChieuPhim
                 {
                     txtDienVien.Text = dgvPhim.Rows[e.RowIndex].Cells["DienVien"].Value.ToString();
                 }
-                if (dgvPhim.Rows[e.RowIndex].Cells["TenLoai"].Value != null)
+                if (dgvPhim.Rows[e.RowIndex].Cells["MaLoai"].Value != null)
                 {
-                    txtTheLoai.Text = dgvPhim.Rows[e.RowIndex].Cells["TenLoai"].Value.ToString();
+                    txtTheLoai.Text = dgvPhim.Rows[e.RowIndex].Cells["MaLoai"].Value.ToString();
                 }
                 if (dgvPhim.Rows[e.RowIndex].Cells["NamSX"].Value != null)
                 {
-                    dtpNamSX.Value = DateTime.Parse(dgvPhim.Rows[e.RowIndex].Cells["NamSX"].Value.ToString());
+                    dtpNanSX.Value = DateTime.Parse(dgvPhim.Rows[e.RowIndex].Cells["NamSX"].Value.ToString());
                 }
                 if (dgvPhim.Rows[e.RowIndex].Cells["QuocGia"].Value != null)
                 {
@@ -173,9 +175,9 @@ namespace QuanLyRapChieuPhim
                 p.MaPhim = int.Parse(txtMaPhim.Text);
                 p.TenPhim = txtTen.Text;
                 p.DaoDien = txtDaoDien.Text;
-                p.DaoDien = txtDaoDien.Text;
                 p.DienVien = txtDienVien.Text;
                 p.MaLoai = int.Parse(txtTheLoai.Text);
+                p.NamSX = dtpNanSX.Value;
                 p.QuocGia = cbxQuocGia.Text;
                 p.ThoiLuong = int.Parse(txtThoiLuong.Text);
                 p.Poster = txtPos.Text;
