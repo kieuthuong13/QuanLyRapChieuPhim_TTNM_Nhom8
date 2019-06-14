@@ -74,9 +74,9 @@
             this.label1.ForeColor = System.Drawing.Color.Brown;
             this.label1.Location = new System.Drawing.Point(227, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(250, 24);
+            this.label1.Size = new System.Drawing.Size(311, 24);
             this.label1.TabIndex = 13;
-            this.label1.Text = "Phần mềm quản lý nhân sự";
+            this.label1.Text = "Phần mềm quản lý rạp chiếu phim";
             // 
             // textBoxUser
             // 

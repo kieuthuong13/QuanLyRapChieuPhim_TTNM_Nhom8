@@ -234,6 +234,16 @@ namespace QuanLyRapChieuPhim.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap refresh_48_hot1 {
+            get {
+                object obj = ResourceManager.GetObject("refresh_48_hot1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap save_48_hot {
             get {
                 object obj = ResourceManager.GetObject("save_48_hot", resourceCulture);

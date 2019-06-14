@@ -42,6 +42,7 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -58,17 +59,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtMaThanhVien = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picSDT = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThanhVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaTV)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSDT)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,6 +83,7 @@
             this.dgvThanhVien.Name = "dgvThanhVien";
             this.dgvThanhVien.Size = new System.Drawing.Size(1081, 308);
             this.dgvThanhVien.TabIndex = 185;
+            this.dgvThanhVien.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThanhVien_RowEnter);
             // 
             // btnThongKe
             // 
@@ -159,6 +160,7 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label10
             // 
@@ -229,6 +231,13 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(237, 26);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(185, 26);
+            this.textBox1.TabIndex = 184;
+            // 
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
@@ -294,6 +303,7 @@
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnXoa
             // 
@@ -310,6 +320,7 @@
             this.btnXoa.Text = "Xóa";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnTimKiem
             // 
@@ -362,6 +373,7 @@
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(185, 26);
             this.txtSDT.TabIndex = 5;
+            this.txtSDT.TextChanged += new System.EventHandler(this.txtSDT_TextChanged);
             // 
             // label4
             // 
@@ -398,10 +410,11 @@
             this.txtMaThanhVien.Name = "txtMaThanhVien";
             this.txtMaThanhVien.Size = new System.Drawing.Size(185, 26);
             this.txtMaThanhVien.TabIndex = 1;
+            this.txtMaThanhVien.TextChanged += new System.EventHandler(this.txtMaThanhVien_TextChanged_1);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.pictureBox1);
+            this.groupBox3.Controls.Add(this.picSDT);
             this.groupBox3.Controls.Add(this.rtbGhiChu);
             this.groupBox3.Controls.Add(this.cbxGioiTinh);
             this.groupBox3.Controls.Add(this.picMaTV);
@@ -428,16 +441,16 @@
             this.groupBox3.Size = new System.Drawing.Size(635, 220);
             this.groupBox3.TabIndex = 184;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Nhập đầy đủ thông tin Phim";
+            this.groupBox3.Text = "Nhập đầy đủ thông tin thành viên";
             // 
-            // pictureBox1
+            // picSDT
             // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(610, 36);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(19, 23);
-            this.pictureBox1.TabIndex = 193;
-            this.pictureBox1.TabStop = false;
+            this.picSDT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picSDT.Location = new System.Drawing.Point(610, 36);
+            this.picSDT.Name = "picSDT";
+            this.picSDT.Size = new System.Drawing.Size(19, 23);
+            this.picSDT.TabIndex = 193;
+            this.picSDT.TabStop = false;
             // 
             // label2
             // 
@@ -490,13 +503,6 @@
             this.groupBox1.TabIndex = 183;
             this.groupBox1.TabStop = false;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(237, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(185, 26);
-            this.textBox1.TabIndex = 184;
-            // 
             // frmQuanLyThanhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -518,7 +524,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSDT)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -561,7 +567,7 @@
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picSDT;
         private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -172,6 +172,17 @@ namespace QuanLyRapChieuPhim
                 return;
             }
         }
-        
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            //hỏi lại có chắc chắn muốn xóa hay không
+            if (DialogResult.OK == MessageBox.Show("Xóa bản ghi hiện tại sẽ làm thay đổi hoặc xóa các bản ghi liên kết!\nBạn có muốn tiếp tục không?"
+                , "Cảnh báo xóa!", MessageBoxButtons.OKCancel))
+            {
+                db.Database.ExecuteSqlCommand("DELETE PHONGCHIEU WHERE MaPhong = " + txtMaPhong.Text);
+                db.SaveChanges();
+                MessageBox.Show("Xóa bản ghi thành công!");
+            }
+        }
     }
 }

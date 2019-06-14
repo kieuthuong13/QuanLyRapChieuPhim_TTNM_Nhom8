@@ -30,6 +30,8 @@
         {
             this.btnThem = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtThongKe = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.txtNoiDung = new System.Windows.Forms.TextBox();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
@@ -57,8 +59,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtThongKe = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhongChieu)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -102,6 +102,23 @@
             this.groupBox2.TabIndex = 186;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
+            // 
+            // txtThongKe
+            // 
+            this.txtThongKe.Location = new System.Drawing.Point(131, 116);
+            this.txtThongKe.Name = "txtThongKe";
+            this.txtThongKe.Size = new System.Drawing.Size(229, 26);
+            this.txtThongKe.TabIndex = 179;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.Navy;
+            this.label10.Location = new System.Drawing.Point(6, 167);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(98, 19);
+            this.label10.TabIndex = 178;
+            this.label10.Text = "Nhập nội dung";
             // 
             // txtNoiDung
             // 
@@ -159,6 +176,7 @@
             this.btnXoa.Text = "Xóa";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnTimKiem
             // 
@@ -410,23 +428,6 @@
             this.groupBox1.Size = new System.Drawing.Size(992, 65);
             this.groupBox1.TabIndex = 183;
             this.groupBox1.TabStop = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.Navy;
-            this.label10.Location = new System.Drawing.Point(6, 167);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(98, 19);
-            this.label10.TabIndex = 178;
-            this.label10.Text = "Nhập nội dung";
-            // 
-            // txtThongKe
-            // 
-            this.txtThongKe.Location = new System.Drawing.Point(131, 116);
-            this.txtThongKe.Name = "txtThongKe";
-            this.txtThongKe.Size = new System.Drawing.Size(229, 26);
-            this.txtThongKe.TabIndex = 179;
             // 
             // frmQuanLyPhongChieu
             // 

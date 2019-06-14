@@ -218,6 +218,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CSDL\script.sql" />
+    <None Include="Resources\refresh_48_hot1.png" />
     <None Include="Resources\baocaoTH.png" />
   </ItemGroup>
   <ItemGroup />
