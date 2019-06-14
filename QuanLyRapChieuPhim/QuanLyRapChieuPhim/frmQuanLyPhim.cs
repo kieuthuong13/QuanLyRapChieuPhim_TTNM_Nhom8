@@ -16,7 +16,11 @@ namespace QuanLyRapChieuPhim
 {
     public partial class frmQuanLyPhim : Form
     {
+        #region MY PARAMETER
         QuanLyRapPhim db = new QuanLyRapPhim();
+        List<string> lQuocGia = new List<string>();
+        List<string> lTheLoai = new List<string>();
+        #endregion
 
         #region MY FUNCTION
         public void Clear()
@@ -29,6 +33,7 @@ namespace QuanLyRapChieuPhim
             txtThoiLuong.Clear();
             txtPos.Clear();
             txtTrailer.Clear();
+            txtQuocGia.Clear();
             rtbNoiDung.Clear();
         }
         #endregion
@@ -47,7 +52,6 @@ namespace QuanLyRapChieuPhim
         }
 
         #region MY STRUCT - CLASS
-        [Table("PHIM")]
         public  class PHIM_STRUCT
         {
             [Key]
@@ -65,10 +69,9 @@ namespace QuanLyRapChieuPhim
             public int? MaLoai { get; set; }
 
             [StringLength(100)]
-            public string TenLoai { get; set; }
+            public string NoiDung { get; set; }
 
-            [StringLength(100)]
-            public string NamSX { get; set; }
+            public DateTime? NamSX { get; set; }
 
             [StringLength(100)]
             public string QuocGia { get; set; }
@@ -82,13 +85,13 @@ namespace QuanLyRapChieuPhim
             public string Trailer { get; set; }
 
             [StringLength(100)]
-            public string NoiDung { get; set; }
+            public string TenLoai { get; set; }
         }
         #endregion
 
         private void frmQuanLyPhim_Load(object sender, EventArgs e)
         {
-            dgvPhim.DataSource = db.Database.SqlQuery<PHIM_STRUCT>("Select * from PHIM").ToList();
+            btnLamMoi_Click(sender, e);
             this.Owner.Hide();
         }
 
@@ -115,6 +118,7 @@ namespace QuanLyRapChieuPhim
         {
             try
             {
+                Clear();
                 if (dgvPhim.Rows[e.RowIndex].Cells["MaPhim"].Value != null)
                 {
                     txtMaPhim.Text = dgvPhim.Rows[e.RowIndex].Cells["MaPhim"].Value.ToString();
@@ -141,7 +145,7 @@ namespace QuanLyRapChieuPhim
                 }
                 if (dgvPhim.Rows[e.RowIndex].Cells["QuocGia"].Value != null)
                 {
-                    cbxQuocGia.Text = dgvPhim.Rows[e.RowIndex].Cells["QuocGia"].Value.ToString();
+                    txtQuocGia.Text = dgvPhim.Rows[e.RowIndex].Cells["QuocGia"].Value.ToString();
                 }
                 if (dgvPhim.Rows[e.RowIndex].Cells["ThoiLuong"].Value != null)
                 {
@@ -178,7 +182,7 @@ namespace QuanLyRapChieuPhim
                 p.DienVien = txtDienVien.Text;
                 p.MaLoai = int.Parse(txtTheLoai.Text);
                 p.NamSX = dtpNanSX.Value;
-                p.QuocGia = cbxQuocGia.Text;
+                p.QuocGia = txtQuocGia.Text;
                 p.ThoiLuong = int.Parse(txtThoiLuong.Text);
                 p.Poster = txtPos.Text;
                 p.Trailer = txtTrailer.Text;
@@ -211,7 +215,87 @@ namespace QuanLyRapChieuPhim
 
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
-            dgvPhim.DataSource = db.Database.SqlQuery<PHIM_STRUCT>("Select * from PHIM").ToList();
+            dgvPhim.DataSource = db.Database.SqlQuery<PHIM_STRUCT>("SELECT p.MaPhim, p.TenPhim, p.DaoDien, p.DienVien, l.TenLoai, p.NoiDung, p.NamSX, p.QuocGia, p.ThoiLuong, p.Poster, p.Trailer FROM PHIM p, LOAIPHIM l WHERE p.MaLoai = l.MaLoai").Cast<PHIM_STRUCT>().ToList();
+            lTheLoai = db.Database.SqlQuery<string>("SELECT TenLoai FROM LOAIPHIM").ToList();
+            lQuocGia = db.Database.SqlQuery<string>("SELECT QuocGia FROM PHIM").ToList();
+            for (int i = 0; i < lTheLoai.Count; i++)
+            {
+                for (int j = lTheLoai.Count - 1; j > i; j--)
+                {
+                    if (lTheLoai[i] == lTheLoai[j])
+                    {
+                        lTheLoai.RemoveAt(j);
+                    }
+                }
+            }
+
+            for (int i = 0; i < lQuocGia.Count; i++)
+            {
+                for (int j = lQuocGia.Count - 1; j > i; j--)
+                {
+                    if (lQuocGia[i] == lQuocGia[j])
+                    {
+                        lQuocGia.RemoveAt(j);
+                    }
+                }
+            }
+        }
+
+        private void cbbThongKeMuc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string loaiThongKe = cbbThongKeMuc.Text;
+            int i = 0;
+            switch (loaiThongKe)
+            {
+                case "Quốc gia":
+                    cbbNoiDung.Items.Clear();
+                    for (i = 0; i < lQuocGia.Count; i++)
+                    {
+                        if (!string.IsNullOrWhiteSpace(lQuocGia[i]))
+                        {
+                            cbbNoiDung.Items.Add(lQuocGia[i]);
+                        }
+                    }
+                    break;
+
+                case "Thể loại":
+                    cbbNoiDung.Items.Clear();
+                    for (i = 0; i < lTheLoai.Count; i++)
+                    {
+                        if (!string.IsNullOrWhiteSpace(lTheLoai[i]))
+                        {
+                            cbbNoiDung.Items.Add(lTheLoai[i]);
+                        }
+                    }
+                    break;
+
+                default:
+                    return;
+            }
+            cbbNoiDung.Text = null;
+        }
+
+        private void cbbNoiDung_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(cbbNoiDung.Text))
+            {
+                int i = 0;
+                dgvPhim.DataSource = null;
+                dgvPhim.Refresh();
+                switch (cbbThongKeMuc.Text)
+                {
+                    case "Quốc gia":
+                        dgvPhim.DataSource = db.Database.SqlQuery<PHIM_STRUCT>("SELECT p.MaPhim, p.TenPhim, p.DaoDien, p.DienVien, l.TenLoai, p.NoiDung, p.NamSX, p.QuocGia, p.ThoiLuong, p.Poster, p.Trailer FROM PHIM p, LOAIPHIM l WHERE p.MaLoai = l.MaLoai AND p.QuocGia = N'" + cbbNoiDung.Text + "'").Cast<PHIM_STRUCT>().ToList();
+                        break;
+
+                    case "Thể loại":
+                        dgvPhim.DataSource = db.Database.SqlQuery<PHIM_STRUCT>("SELECT p.MaPhim, p.TenPhim, p.DaoDien, p.DienVien, l.TenLoai, p.NoiDung, p.NamSX, p.QuocGia, p.ThoiLuong, p.Poster, p.Trailer FROM PHIM p, LOAIPHIM l WHERE p.MaLoai = l.MaLoai AND l.TenLoai = N'" + cbbNoiDung.Text + "'").Cast<PHIM_STRUCT>().ToList();
+                        break;
+
+                    default:
+                        return;
+                }
+            }
         }
     }
 }
